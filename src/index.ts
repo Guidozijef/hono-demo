@@ -68,7 +68,7 @@ app.use('/api/auth/*', jwt({ secret: JWT_SECRET, alg: "HS256" }))
 app.delete('/api/auth/users/:id', async (c) => {
   // 获取 Token 里的用户信息
   const payload = c.get('jwtPayload')
-  console.log('操作人:', payload.username)
+  console.log('操作人:', (payload as any).username)
 
   // 执行删除逻辑...
   return c.json({ message: '受保护的数据已删除' })

@@ -1,2 +1,8 @@
-# hono-demo
-hono框架的api服务
+```
+npm install
+npm run dev
+```
+
+```
+open http://localhost:3000
+```
